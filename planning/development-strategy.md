@@ -16,13 +16,13 @@ A Practical JavaScript Pomodoro timer
 
 ## User Story Dependencies
 
-![Story Dependency Diagram]()
+![Story Dependency Diagram](https://github.com/AnisyaPurnama/Pomofocus/blob/master/public/userStoryPomo.png?raw=true)
 
 ---
 
 ## WIREFRAME
 
-![wireframe]()
+![wireframe](https://github.com/AnisyaPurnama/Pomofocus/blob/master/public/wireframepomodoro.png?raw=true)
 
 ---
 
