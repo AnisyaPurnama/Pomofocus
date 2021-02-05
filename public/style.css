@@ -1,0 +1,155 @@
+html {
+    background-color: #DB524D;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+
+h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+#container {
+    height: 400px;
+    width: 700px;
+    background-color: #DF645F;
+    margin: 0 auto;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+/*timers*/
+.label {
+    align-self: center;
+    justify-self: center;
+
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+#pomodoro {
+    grid-area: 1 / 2 / 1 / 2;
+    cursor: pointer;
+    border: none;
+    margin: 0px 0px 0px;
+    padding: 0px 5px;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    height: 30px;
+    color:white;
+    font-weight: bold;
+    width: 120px;
+    background-color:#BE5551;
+}
+#break {
+    grid-area: 1 / 4 / 1 / 4;
+    cursor: pointer;
+    border: none;
+    margin: 0px 0px 0px;
+    padding: 0px 5px;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    height: 30px;
+    color:white;
+    font-weight: bold;
+    width: 120px;
+    background-color:#BE5551;
+}
+
+.timer {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    font-size: 100px;
+    font-weight: bold;
+
+}
+
+#pomodoro-timer {
+    grid-area: 4 / 2 / 1 / 2;
+    color: white;
+}
+
+p {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+#break-timer {
+    grid-area: 2 / 4 / 2 / 4;
+}
+
+/*buttons*/
+
+.btn {
+    cursor: pointer;
+    border: none;
+    margin: 10px 0px 0px;
+    padding: 0px 10px;
+    border-radius: 4px;
+    box-shadow: rgb(235 235 235) 0px 6px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    height: 55px;
+    color: rgb(219, 82, 77);
+    font-weight: bold;
+    width: 150px;
+    background-color: white;
+    transition: color 0.5s ease-in-out 0s;
+}
+
+#start {
+    grid-area: 3 / 2 / 3 / 2;
+}
+
+#stop {
+    grid-area: 3 / 4 / 3 / 4;
+}
+
+#reset {
+    grid-area: 3 / 6 / 3 / 6;
+}
+
+h2 {
+    
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#task {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    color: white;
+    overflow-wrap: break-word;
+    text-align:center;
+}
+
+
+.btn-task {
+    cursor: pointer;
+    border: none;
+    margin: 20px 0px 0px;
+    padding: 0px 12px;
+    border-radius: 4px;
+    border-style: dotted;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    height: 55px;
+    color:#EFBFBE;
+    font-weight: bold;
+    width: 200px;
+    background-color: transparent;
+}

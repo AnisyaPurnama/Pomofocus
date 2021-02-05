@@ -1,6 +1,6 @@
-# Todo List: Practical JavaScript
+# Pomodoro timer: Practical JavaScript
 
-A refactor of the Practical JavaScript Todo List
+A Practical JavaScript Pomodoro timer
 
 ---
 
@@ -8,9 +8,9 @@ A refactor of the Practical JavaScript Todo List
 
 > describe the data used in your project.
 >
-> - what properties?
-> - what types?
-> - what are array entries like?
+> - what properties? Start time, Stop/pause time, break time
+> - what types? Objects and functions
+> - what are array entries like? Prototype
 
 ---
 
@@ -39,19 +39,51 @@ A refactor of the Practical JavaScript Todo List
 
 **As a user I want to see the home page when I load the site**
 
-- _acceptance criteria_
-- _acceptance criteria_
-- ...
+- create HTLM index
+- style with CSS
 
 ### REPO
 
-- This user story is developed on branch `_`.
-- This branch is merged to `master` branch after completion.
+- All the user story is developed on branch `master`.
 
 ### Task A
+**As a user I want to start a timer and focus on the task for 25 minutes**
+
+#### HTML
+- Create start button `start`
+
+#### CSS
+- Styled the presentation of button, color, font, etc.
+
+#### JS
+- set the `timer`functionality in a class
+- create EventListener `start`
+- set the time Interval `setInterval`
+
+
 
 ### Task B
+**As a user I want to pause the timer**
+#### HTML
+- Create pause button `pause`
 
-### Task ...
+#### CSS
+- Styled the presentation of button, color, font, etc.
 
+#### JS
+- create the `stop` functionality in a class 
+- create EventListener `stop`
+- stop the time Interval `stopInterval` & `clearInterval`
+
+
+### Task C
+**As a user I want have a break timer for 5 minutes**
+#### HTML
+- Create short break feature `Short Break`
+
+#### CSS
+- Styled the presentation of button, color, font, etc.
+
+#### JS
+- create condition in `timer` function
 ---

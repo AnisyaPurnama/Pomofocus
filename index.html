@@ -2,18 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="utf8" />
-    <title>your project name</title>
-
+    <title>Pomodoro</title>
+    <script> src="https://kit.fontawesome.com/2a870107f3.js"</script>
+    <link rel="icon" type="image/png" sizes="32x32" href="./public/checkicon.png">
     <link href="./public/style.css" rel="stylesheet" />
   </head>
 
   <body>
-    <div id="user-interface"></div>
+    <i class="fas fa-check-circle"></i> 
+    <h1>Pomofocus</h1><hr/>
+    <div id="container">
+      <button id="pomodoro" class="label">Pomodoro</button>
+      <button id="break" class="label">Short Break</button>
+
+  <!--Pomodoro Timer-->
+    <div id="pomodoro-timer" class="timer">
+      <p id="p-minutes">25</p>
+      <p class="semicolon">:</p>
+      <p id="p-seconds">00</p>
+    </div>
+
+  <!--Counter
+      <p id="counter" class="timer">0</p> -->
+
+  <!--Break Timer-->
+    <div id="break-timer" class="timer">
+      <p id="b-minutes">05</p>
+      <p class="semicolon">:</p>
+      <p id="b-seconds">00</p>
+    </div>
+    <button id="start" class="btn">START</button>
+    <button id="stop" class="btn">PAUSE</button>
+    </div>
+
+    <!-- Task List-->
+    <h2>Time to work!</h2>    
+    <div>
+      <p id="task">Tasks</p><hr/>
+      <button id="add" class="btn-task">Add</button>
+
+    </div>
+    
 
     <!-- initialize your application -->
     <script type="module" src="./src/init/index.js"></script>
 
     <!-- load the review buttons for your live deployment  -->
-    <script type="module" src="./lib/review-buttons.js"></script>
+    <!-- <script type="module" src="./lib/review-buttons.js"></script>-->
+
+    <script src="./src/data.js"></script>
   </body>
 </html>
