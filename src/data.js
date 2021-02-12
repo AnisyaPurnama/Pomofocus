@@ -1,63 +1,45 @@
-'use strict';
+export const changeBg = (event) => {
+	const target = event.target;
 
-const start = document.getElementById('start');
-const stop = document.getElementById('stop');
-const pminutes = document.getElementById('p-minutes');
-const pseconds = document.getElementById('p-seconds');
-const bminutes = document.getElementById('b-minutes');
-const bseconds = document.getElementById('b-seconds');
+	switch (target.id) {
+		case 'pomodoro': 
+			target.className = 'time-btn-active'; 
+			active(event.currentTarget); 
+			document.getElementsByClassName('wrapper')[0].style.background = 'rgb(240, 91, 86)'; 
+			document.getElementsByClassName('time-count-btn')[0].style.color = 'rgb(240, 91, 86)'; // make button active
+			document.getElementById('validator').style.background = 'rgb(240, 91, 86)'; //validator bg
 
-//store a reference to a timer variable
-let startTimer;
-start.addEventListener('click', function(){
-    if(startTimer === undefined){
-    startTimer = setInterval(timer, 1000)
-} 
-else {
-    alert("Timer is running!")
-}
-});
+			const time = document.getElementsByClassName('time-count')[0]; //timer board
+			time.innerHTML = '25:00'; // initial status
+			document.getElementsByClassName('start-work')[0].innerHTML = 'Time to work!'; // change state of plan
 
-stop.addEventListener('click', function(){
-    stopInterval();
-    startTimer = undefined;
-    });
-class Timer {
-    constructor (start, stop) {
-    this.start = start;
-    this.stop = stop;
-}
-    
-get start() {
-return this.start;
-}
+			break;
+		case 'short-break':
+			target.className = 'time-btn-active';
+			active(event.currentTarget);
+			document.getElementsByClassName('wrapper')[0].style.background = 'rgb(76, 166, 169)';
+			document.getElementsByClassName('time-count-btn')[0].style.color = 'rgb(76, 166, 169)';
+			document.getElementById('validator').style.background = 'rgb(76, 166, 169)';
+			document.getElementsByClassName('time-count')[0].innerHTML = '05:00';
+			document.getElementsByClassName('start-work')[0].innerHTML = 'Time for a break';
+			break;
+		case 'long-break':
+			target.className = 'time-btn-active';
+			active(event.currentTarget);
+			document.getElementsByClassName('wrapper')[0].style.background = 'rgb(73, 143, 193)';
+			document.getElementsByClassName('time-count-btn')[0].style.color = 'rgb(73, 143, 193)';
+			document.getElementById('validator').style.background = 'rgb(73, 143, 193)';
+			document.getElementsByClassName('time-count')[0].innerHTML = '15:00';
+			document.getElementsByClassName('start-work')[0].innerHTML = 'Time for a break';
 
-set start (startTimer) {
-if(pseconds.innerText != 0){
-    pseconds.innerText--;
-} 
-else if(pminutes.innerText != 0 && pseconds.innerText == 0){
-    pseconds.innerText = 59;
-    pminutes.innerText--;
-}
-this.start = startTimer
-}
+			break;
+	}
 
-get stop(){
-    return this.stop;
-}
-set stop(StopTimer) {
-    if(pminutes.innerText == 0 && pseconds.innerText == 0){
-        if(bseconds.innerText != 0){
-        bseconds.innerText--;
-        } 
-    else if(bminutes.innerText != 0 && bseconds.innerText == 0){
-        bseconds.innerText = 59;
-        bminutes.innerText--;
-        }
-    }
-    stop(){
-    clearInterval(startTimer);
-        this.startTimer = undefined;
-    }
-}
+	function active(parent) {
+		Array.from(parent.children).forEach((element) => {
+			if (element !== event.target) {
+				element.className = 'time-btn';
+			}
+		});
+	}
+};
